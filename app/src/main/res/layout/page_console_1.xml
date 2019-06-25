@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/iv_power"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_schedule"
+        android:layout_toStartOf="@+id/iv_schedule"
+        android:src="@drawable/ic_power"
+        />
+
+    <ImageView
+        android:id="@+id/iv_schedule"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        android:src="@drawable/ic_schedule"
+        />
+
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_schedule"
+        android:layout_toRightOf="@+id/iv_schedule"
+        android:src="@drawable/ic_settings"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.demo.iot.MainActivity"
+    >
+
+    <org.demo.iot.view.ClockView
+        android:id="@+id/clock_view"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:border="2dp"
+        app:colorS="#505050"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pointX="160dp"
+        app:pointY="160dp"
+        app:radius="160dp"
+        />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:background="#343434"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Good"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="PM2.5:3;25℃;65%"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_state"
+        />
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Fri, 11 May, 2015"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_meridiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_time"
+            android:text="AM"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="138dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_date"
+            android:layout_toLeftOf="@+id/tv_meridiem"
+            android:layout_toStartOf="@+id/tv_meridiem"
+            android:text="11:30"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_cloud"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="258dp"
+            />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
